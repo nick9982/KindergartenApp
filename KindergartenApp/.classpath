@@ -6,6 +6,9 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/ig1461qt/sqljdbc_11.2.0.0_enu/sqljdbc_11.2/enu/mssql-jdbc-11.2.0.jre17.jar"/>
+	<classpathentry kind="lib" path="sql_drivers/sqljdbc_11.2/enu/mssql-jdbc-11.2.0.jre11.jar"/>
+	<classpathentry kind="lib" path="sql_drivers/sqljdbc_11.2/enu/mssql-jdbc-11.2.0.jre17.jar"/>
+	<classpathentry kind="lib" path="sql_drivers/sqljdbc_11.2/enu/mssql-jdbc-11.2.0.jre18.jar"/>
+	<classpathentry kind="lib" path="sql_drivers/sqljdbc_11.2/enu/mssql-jdbc-11.2.0.jre8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
