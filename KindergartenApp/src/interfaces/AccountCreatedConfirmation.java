@@ -24,30 +24,38 @@ public class AccountCreatedConfirmation implements ActionListener {
 	{
 		this.c = c;
 		this.src = src;
-		window = new JFrame("Create Student Account");
+		window = new JFrame("Account Created Successfully");
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setSize(600, 200);
 		window.setLayout(new GridBagLayout());
 		window.setLocationRelativeTo(null);
 		window.setVisible(true);
+		window.setResizable(true);
 		
 		label = new JLabel("Account Created Successfully");
 		btn = new JButton("Continue to login");
-		label.setFont(new Font("Serif", Font.PLAIN, 28));
 		
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.gridx = 0;
 		gbc.gridy = 0;
+		gbc.gridwidth = 1;
+		gbc.gridheight = 1;
 		gbc.weightx = 1;
 		gbc.weighty = 1;
-		gbc.insets = new Insets(40, 75, 0, 75);
+		gbc.fill = GridBagConstraints.BOTH;
+		gbc.insets = new Insets(0,208,0,0);
 		window.add(label, gbc);
 		
+		gbc.insets = new Insets(5,5,5,5);
 		gbc.gridy = 1;
-		gbc.insets = new Insets(0, 75, 40, 75);
 		window.add(btn, gbc);
 		
 		btn.addActionListener(this);
+		
+		
+		window.pack();
+		window.resize(600, 200);
+		
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {

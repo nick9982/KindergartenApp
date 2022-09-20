@@ -184,7 +184,7 @@ public class CreateStudentAccount implements ActionListener
 								+ "('"+id+"', '"+u_name+"', '"+pass+"')";
 							
 							stmt.execute(qry);
-							LoginPageStudent lps = new LoginPageStudent(c);
+							AccountCreatedConfirmation acc = new AccountCreatedConfirmation(0, c);
 							window.dispose();
 						}
 					}
