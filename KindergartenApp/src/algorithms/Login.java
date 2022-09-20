@@ -4,6 +4,7 @@ import java.security.NoSuchAlgorithmException;
 
 
 import java.util.Random;
+import java.util.Stack;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -59,10 +60,30 @@ public class Login {
 				else hasSymbol = true;
 			}
 			String error = "The password must include the following: ";
-			if(!hasCapital) error += "one capital, ";
-			if(!hasLowerCase) error += ", one lowercase";
-			if(!hasInt) error += ", one integer";
-			if(!hasSymbol) error += ", and one symbol";
+			Stack<String>errors = new Stack<String>();
+			if(!hasCapital) errors.push("one capital");
+			if(!hasLowerCase) errors.push("one lower case");
+			if(!hasInt) errors.push("one integer");
+			if(!hasSymbol) errors.push("one symbol");
+			boolean t = false;
+			while(!errors.empty())
+			{
+				
+				String curError = errors.pop();
+				if(t == false)
+				{
+					error += curError;
+					t = true;
+				}
+				else if(errors.empty())
+				{
+					error += ", and " + curError;
+				}
+				else
+				{
+					error += ", " + curError;
+				}
+			}
 			if(!hasCapital || !hasLowerCase || !hasInt || !hasSymbol) return error;
 			return "";
 		}
