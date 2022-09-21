@@ -21,7 +21,6 @@ public class Driver {
 							+ "loginTimeout=30;"
 							+ "database=kindergarten_app;";
 			Connection c = DriverManager.getConnection(url);
-			Statement s = c.createStatement();
 			LoginPageStudent lp = new LoginPageStudent(c);
 		}
 		catch(SQLException e)
